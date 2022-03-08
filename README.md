@@ -1,18 +1,34 @@
-## Getting Started
+#### Enum & Stream API & Lambda Expressions
+---
+##### Enum
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+```
+public enum Example(){
+    
+    instance1(1, "Instance1 is constructed in this way");
+    
+    private int a;
+    private string b;
+    
+    // Constructor is private
+    private Example(int a, string b){
+        this.a = a;
+        this.b = b;
+    }
+    // Getters & Setters
+} 
 
-## Folder Structure
+```
 
-The workspace contains two folders by default, where:
+##### Stream & Lambda
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+```
+anyList.forEach(item -> item.wantedBehavor());
+anyMap.forEach((key,value) -> whatever will be one with the key and value)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+//Creates a sublist with given constraint
+anyList.stream.filter(t -> constraint).toList();
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+```
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+There are lots of methods of stream api to be checked.
